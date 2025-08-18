@@ -6,14 +6,14 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   centerTitle: true,
-      //   title: Text(
-      //     "My First App",
-      //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
-      //   ),
-      //   backgroundColor: Colors.blue,
-      // ),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "My First App",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+        ),
+        backgroundColor: Colors.blue,
+      ),
       body: Center(
         child: Text(
           "Hello World",
