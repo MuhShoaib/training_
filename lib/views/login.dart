@@ -5,6 +5,9 @@ class Login extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -14,18 +17,73 @@ class Login extends StatelessWidget {
         ),
         backgroundColor: Colors.blue,
       ),
-      body: Center(
-        child: Text(
-          "Hello World",
-          style: TextStyle(
 
+      // body: Center(
+      //   child: Text(
+      //     "Hello World",
+      //     style: TextStyle(
+      //       backgroundColor: Colors.pink,
+      //       color: Colors.yellow,
+      //       fontWeight: FontWeight.w600,
+      //       fontSize: 30,
+      //       letterSpacing: 10,
+      //     ),
+      //   ),
+      // ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        height: height * 0.25,
+        width: width,
 
-            backgroundColor: Colors.pink,
-            color: Colors.yellow,
-            fontWeight: FontWeight.w600,
-            fontSize: 30,
-            letterSpacing: 10,
+        decoration: BoxDecoration(
+          // shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
+          ],
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [0.1, 1, 1.5],
+            colors: [Colors.orange, Colors.blue, Colors.yellow],
           ),
+
+          borderRadius: BorderRadius.circular(10),
+          // border: Border.all(color: Colors.black, width: 1),
+          // borderRadius: BorderRadius.only(
+          //   bottomLeft: Radius.circular(20),
+          //   topRight: Radius.circular(20),
+          // ),
+          color: Colors.red,
+        ),
+
+        child: Container(
+          // margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          // height: height*0.25,
+          // width: width,
+          decoration: BoxDecoration(
+            // shape: BoxShape.circle,
+            boxShadow: [
+              BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
+            ],
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: [0.1, 1, 1.5],
+              colors: [Colors.red, Colors.pink, Colors.yellow],
+            ),
+
+            borderRadius: BorderRadius.circular(10),
+            // border: Border.all(color: Colors.black, width: 1),
+            // borderRadius: BorderRadius.only(
+            //   bottomLeft: Radius.circular(20),
+            //   topRight: Radius.circular(20),
+            // ),
+            color: Colors.red,
+          ),
+
+          child: Center(child: Text("Iqra College")),
         ),
       ),
       backgroundColor: Colors.grey.shade200,
