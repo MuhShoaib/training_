@@ -9,6 +9,13 @@ class Login extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
+      floatingActionButton: Container(
+        height: 60,
+        width: 60,
+        decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.blue),
+      ),
       appBar: AppBar(
         centerTitle: true,
         title: Text(
@@ -30,62 +37,183 @@ class Login extends StatelessWidget {
       //     ),
       //   ),
       // ),
-      body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        height: height * 0.25,
-        width: width,
-
-        decoration: BoxDecoration(
-          // shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
-          ],
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            stops: [0.1, 1, 1.5],
-            colors: [Colors.orange, Colors.blue, Colors.yellow],
-          ),
-
-          borderRadius: BorderRadius.circular(10),
-          // border: Border.all(color: Colors.black, width: 1),
-          // borderRadius: BorderRadius.only(
-          //   bottomLeft: Radius.circular(20),
-          //   topRight: Radius.circular(20),
+      body: SingleChildScrollView(
+        child: Center(
+          // child: Column(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     SizedBox(height: 10),
+          //
+          //     Text("Hello"),
+          //     Text("Hello"),
+          //     Text("Hello"),
+          //     Text("Hello"),
+          //     Text("Hello"),
+          //     // Container(
+          //     //   margin: EdgeInsets.symmetric(horizontal: 20),
+          //     //   // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          //     //   height: height * 0.25,
+          //     //   width: width,
+          //     //   decoration: BoxDecoration(
+          //     //     // shape: BoxShape.circle,
+          //     //     boxShadow: [
+          //     //       BoxShadow(
+          //     //         color: Colors.black.withOpacity(0.4),
+          //     //         blurRadius: 6,
+          //     //       ),
+          //     //     ],
+          //     //     gradient: LinearGradient(
+          //     //       begin: Alignment.topLeft,
+          //     //       end: Alignment.bottomRight,
+          //     //       stops: [0.1, 1, 1.5],
+          //     //       colors: [Colors.red, Colors.pink, Colors.yellow],
+          //     //     ),
+          //     //
+          //     //     borderRadius: BorderRadius.circular(10),
+          //     //     // border: Border.all(color: Colors.black, width: 1),
+          //     //     // borderRadius: BorderRadius.only(
+          //     //     //   bottomLeft: Radius.circular(20),
+          //     //     //   topRight: Radius.circular(20),
+          //     //     // ),
+          //     //     color: Colors.red,
+          //     //   ),
+          //     //
+          //     //   child: Center(child: Text("Iqra College")),
+          //     // ),
+          //     //
+          //     // SizedBox(height: 10),
+          //     // Container(
+          //     //   margin: EdgeInsets.symmetric(horizontal: 20),
+          //     //   // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          //     //   height: height * 0.25,
+          //     //   width: width,
+          //     //   decoration: BoxDecoration(
+          //     //     // shape: BoxShape.circle,
+          //     //     boxShadow: [
+          //     //       BoxShadow(
+          //     //         color: Colors.black.withOpacity(0.4),
+          //     //         blurRadius: 6,
+          //     //       ),
+          //     //     ],
+          //     //     gradient: LinearGradient(
+          //     //       begin: Alignment.topLeft,
+          //     //       end: Alignment.bottomRight,
+          //     //       stops: [0.1, 1, 1.5],
+          //     //       colors: [Colors.red, Colors.pink, Colors.yellow],
+          //     //     ),
+          //     //
+          //     //     borderRadius: BorderRadius.circular(10),
+          //     //     // border: Border.all(color: Colors.black, width: 1),
+          //     //     // borderRadius: BorderRadius.only(
+          //     //     //   bottomLeft: Radius.circular(20),
+          //     //     //   topRight: Radius.circular(20),
+          //     //     // ),
+          //     //     color: Colors.red,
+          //     //   ),
+          //     //
+          //     //   child: Center(child: Text("Iqra College")),
+          //     // ),
+          //     //
+          //     // SizedBox(height: 10),
+          //     // Container(
+          //     //   margin: EdgeInsets.symmetric(horizontal: 20),
+          //     //   // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+          //     //   height: height * 0.25,
+          //     //   width: width,
+          //     //   decoration: BoxDecoration(
+          //     //     // shape: BoxShape.circle,
+          //     //     boxShadow: [
+          //     //       BoxShadow(
+          //     //         color: Colors.black.withOpacity(0.4),
+          //     //         blurRadius: 6,
+          //     //       ),
+          //     //     ],
+          //     //     gradient: LinearGradient(
+          //     //       begin: Alignment.topLeft,
+          //     //       end: Alignment.bottomRight,
+          //     //       stops: [0.1, 1, 1.5],
+          //     //       colors: [Colors.red, Colors.pink, Colors.yellow],
+          //     //     ),
+          //     //
+          //     //     borderRadius: BorderRadius.circular(10),
+          //     //     // border: Border.all(color: Colors.black, width: 1),
+          //     //     // borderRadius: BorderRadius.only(
+          //     //     //   bottomLeft: Radius.circular(20),
+          //     //     //   topRight: Radius.circular(20),
+          //     //     // ),
+          //     //     color: Colors.red,
+          //     //   ),
+          //     //
+          //     //   child: Center(child: Text("Iqra College")),
+          //     // ),
+          //   ],
           // ),
-          color: Colors.red,
-        ),
-
-        child: Container(
-          // margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-          // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
-          // height: height*0.25,
-          // width: width,
-          decoration: BoxDecoration(
-            // shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Hello"),
+              // Spacer(),
+              Text("Hello"),
             ],
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              stops: [0.1, 1, 1.5],
-              colors: [Colors.red, Colors.pink, Colors.yellow],
-            ),
-
-            borderRadius: BorderRadius.circular(10),
-            // border: Border.all(color: Colors.black, width: 1),
-            // borderRadius: BorderRadius.only(
-            //   bottomLeft: Radius.circular(20),
-            //   topRight: Radius.circular(20),
-            // ),
-            color: Colors.red,
           ),
-
-          child: Center(child: Text("Iqra College")),
         ),
       ),
+      // body: Container(
+      //   margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      //   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      //   height: height * 0.25,
+      //   width: width,
+      //
+      //   decoration: BoxDecoration(
+      //     // shape: BoxShape.circle,
+      //     boxShadow: [
+      //       BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
+      //     ],
+      //     gradient: LinearGradient(
+      //       begin: Alignment.topLeft,
+      //       end: Alignment.bottomRight,
+      //       stops: [0.1, 1, 1.5],
+      //       colors: [Colors.orange, Colors.blue, Colors.yellow],
+      //     ),
+      //
+      //     borderRadius: BorderRadius.circular(10),
+      //     // border: Border.all(color: Colors.black, width: 1),
+      //     // borderRadius: BorderRadius.only(
+      //     //   bottomLeft: Radius.circular(20),
+      //     //   topRight: Radius.circular(20),
+      //     // ),
+      //     color: Colors.red,
+      //   ),
+      //
+      //   child: Container(
+      //     // margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      //     // padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+      //     // height: height*0.25,
+      //     // width: width,
+      //     decoration: BoxDecoration(
+      //       // shape: BoxShape.circle,
+      //       boxShadow: [
+      //         BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 6),
+      //       ],
+      //       gradient: LinearGradient(
+      //         begin: Alignment.topLeft,
+      //         end: Alignment.bottomRight,
+      //         stops: [0.1, 1, 1.5],
+      //         colors: [Colors.red, Colors.pink, Colors.yellow],
+      //       ),
+      //
+      //       borderRadius: BorderRadius.circular(10),
+      //       // border: Border.all(color: Colors.black, width: 1),
+      //       // borderRadius: BorderRadius.only(
+      //       //   bottomLeft: Radius.circular(20),
+      //       //   topRight: Radius.circular(20),
+      //       // ),
+      //       color: Colors.red,
+      //     ),
+      //
+      //     child: Center(child: Text("Iqra College")),
+      //   ),
+      // ),
       backgroundColor: Colors.grey.shade200,
     );
   }
