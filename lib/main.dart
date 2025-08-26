@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:training/views/home.dart';
-import 'package:training/views/login.dart';
+import 'package:training/textfield26_08_2025/page.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home(), debugShowCheckedModeBanner: false);
+    return MaterialApp(home: SignIn(), debugShowCheckedModeBanner: false);
   }
 }
 
