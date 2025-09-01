@@ -12,11 +12,10 @@ class ButtonsView extends StatelessWidget {
       appBar: AppBar(),
       body: Column(
         children: [
-
-          Text("Hello World",style: TextStyle(fontSize: 20.fSize),),
+          Text("Hello World", style: TextStyle(fontSize: 20.fSize)),
           AppBtn(text: 'Login', isGradient: true),
           Gap.v(20),
-          AppBtn(text: 'Register',isGradient: true,),
+          AppBtn(text: 'Register', isGradient: true),
         ],
       ),
     );
@@ -38,7 +37,7 @@ class AppBtn extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(30),
         gradient:
-            isGradient ==true
+            isGradient == true
                 ? LinearGradient(
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
@@ -68,7 +67,11 @@ class AppBtn extends StatelessWidget {
             child: Center(
               child: Text(
                 text,
-                style: TextStyle(color: Colors.black, fontSize: 18.fSize,fontFamily: "Poppins"),
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18.fSize,
+                  fontFamily: "Poppins",
+                ),
               ),
             ),
           ),

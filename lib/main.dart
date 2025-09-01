@@ -3,6 +3,7 @@ import 'package:training/size.dart';
 import 'package:training/textfield26_08_2025/page.dart';
 
 import 'buttons27_08_2025/btn.dart';
+import 'list_grid 01_09_2025/list_grid_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(fontFamily: "Poppins"),
 
               debugShowCheckedModeBanner: false,
-              home: ButtonsView(),
+              home: ListGridView(),
             ),
           ),
     );
