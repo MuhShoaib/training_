@@ -25,7 +25,8 @@ class ButtonsView extends StatelessWidget {
 class AppBtn extends StatelessWidget {
   final String text;
   final bool? isGradient;
-  const AppBtn({super.key, required this.text, this.isGradient = false});
+  final Function()? onTap;
+  const AppBtn({super.key, required this.text, this.isGradient = false, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class AppBtn extends StatelessWidget {
         child: InkWell(
           borderRadius: BorderRadius.circular(30),
           splashColor: Colors.white.withOpacity(0.2),
-          onTap: () {},
+          onTap: onTap,
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.h),
             child: Center(
