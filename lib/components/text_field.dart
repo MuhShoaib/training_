@@ -86,14 +86,96 @@ class _ScreenAState extends State<ScreenA> {
             text: 'Next',
             isGradient: false,
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return ScreenB();
-                  },
+              // ScaffoldMessenger.of(
+              //   context,
+              // ).showSnackBar(SnackBar(content: Text("Button is Clicked"),
+              //   showCloseIcon: true,
+              //
+              //   backgroundColor: Colors.green,
+              //   behavior: SnackBarBehavior.floating,
+              // ));
+
+              ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
+                content: Text('Snackbar message'),
+                behavior: SnackBarBehavior.floating,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
                 ),
-              );
+                margin: EdgeInsets.only(
+                    bottom: MediaQuery.of(context).size.height - 100,
+                    right: 20,
+                    left: 20),
+              ));
+              // showDialog(
+              //   context: context,
+              //   builder: (context) {
+              //     // return AlertDialog(
+              //     //   title: Row(
+              //     //     children: [
+              //     //       Text("Next Screen", style: TextStyle(fontSize: 15)),
+              //     //       Spacer(),
+              //     //       IconButton(onPressed: () {
+              //     //
+              //     //
+              //     //         Navigator.pop(context);
+              //     //       }, icon: Icon(Icons.close))
+              //     //     ],
+              //     //   ),
+              //     //   content: Text("Do you want to move to Next Screen?"),
+              //     //   actions: [
+              //     //     ElevatedButton(onPressed: () {
+              //     //
+              //     //       Navigator.push(
+              //     //         context,
+              //     //         MaterialPageRoute(
+              //     //           builder: (context) {
+              //     //             return ScreenB();
+              //     //           },
+              //     //         ),
+              //     //       );
+              //     //     }, child: Text("Yes")),
+              //     //     ElevatedButton(onPressed: () {
+              //     //
+              //     //       Navigator.pop(context);
+              //     //     }, child: Text("No")),
+              //     //   ],
+              //     // );
+              //
+              //     return Dialog(
+              //
+              //       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+              //
+              //       child: Padding(
+              //         padding:  EdgeInsets.symmetric(horizontal: 10.h,vertical: 10.v),
+              //         child: Column(
+              //           crossAxisAlignment: CrossAxisAlignment.start,
+              //           mainAxisSize: MainAxisSize.min,
+              //           children: [
+              //             Text("Exit App"),
+              //             Text("Do you want to Exit?"),
+              //
+              //             Row(
+              //               children: [
+              //                 Expanded(child: AppBtn(text: 'Yes',isGradient: true,)),
+              //                 Expanded(child: AppBtn(text: 'No',isGradient: true,)),
+              //               ],
+              //             )
+              //
+              //
+              //           ],
+              //         ),
+              //       ),
+              //     );
+              //   },
+              // );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) {
+              //       return ScreenB();
+              //     },
+              //   ),
+              // );
             },
           ),
         ],
@@ -109,25 +191,27 @@ class ScreenB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: Column(children: [
-      
-      Center(child: Text("Hello This is Screen B"),
-      
-      
-      ),
-      
-      AppBtn(text: "Back",onTap: () {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Column(
+        children: [
+          Center(child: Text("Hello This is Screen B")),
 
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return ScreenA();
+          AppBtn(
+            text: "Back",
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return ScreenA();
+                  },
+                ),
+              );
             },
           ),
-        );
-
-      },)
-    ]));
+        ],
+      ),
+    );
   }
 }

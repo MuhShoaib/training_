@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(fontFamily: "Poppins"),
 
               debugShowCheckedModeBanner: false,
-              home: Splash(),
+              home: ScreenA(),
             ),
           ),
     );
