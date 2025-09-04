@@ -95,17 +95,16 @@ class _ScreenAState extends State<ScreenA> {
               //   behavior: SnackBarBehavior.floating,
               // ));
 
-              ScaffoldMessenger.of(context).showSnackBar(new SnackBar(
-                content: Text('Snackbar message'),
-                behavior: SnackBarBehavior.floating,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                margin: EdgeInsets.only(
-                    bottom: MediaQuery.of(context).size.height - 100,
-                    right: 20,
-                    left: 20),
-              ));
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //   SnackBar(
+              //     duration: Duration(milliseconds: 500),
+              //     content: Text("Button is Clicked"),
+              //     showCloseIcon: true,
+              //     backgroundColor: Colors.green,
+              //     behavior: SnackBarBehavior.floating,
+              //   ),
+              // );
+
               // showDialog(
               //   context: context,
               //   builder: (context) {

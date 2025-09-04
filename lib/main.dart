@@ -5,6 +5,7 @@ import 'package:training/views/splash.dart';
 
 import 'buttons27_08_2025/btn.dart';
 import 'components/text_field.dart';
+import 'image_pick/image_view.dart';
 import 'list_grid 01_09_2025/list_grid_view.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
               theme: ThemeData(fontFamily: "Poppins"),
 
               debugShowCheckedModeBanner: false,
-              home: ScreenA(),
+              home: ImageView(),
             ),
           ),
     );
